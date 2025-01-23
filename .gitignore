@@ -1,0 +1,9 @@
+.vscode/
+.DS_Store
+
+__pycache__/
+models/__pycache__/
+
+data/__pycache__/
+data/cifar-10-batches-py
+data/MNIST
