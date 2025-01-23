@@ -1,19 +1,19 @@
 data:
   data_name: 'mnist'
-  n_samples: 20000
+  n_samples: 50000
   n_samples_graph: 5000
   latent_dim: 50
 
 training:
   encoder_decoder:
-    num_epochs: 100
-    n_batch: 20
-    learning_rate: 0.0005
+    num_epochs: 200
+    n_batch: 10
+    learning_rate: 0.001
     log_interval: 10
   diffusion:
     num_epochs: 2000
     batch_size: 5000
-    learning_rate: 0.00025
+    learning_rate: 0.0005
     weight_decay: 0.0
     timesteps: 1000
     beta_bounds: [0.0001, 0.02]
@@ -24,8 +24,8 @@ models:
     head: CNN
     model_config: {}
   diffusion:
-    time_embed_dim: 100
-    hidden_units: 600
-    depth: 5
+    time_embed_dim: 32
+    hidden_units: 256
+    depth: 4
     dropout: 0.1
     use_residual: true

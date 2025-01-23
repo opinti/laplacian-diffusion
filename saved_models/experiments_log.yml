@@ -30,54 +30,22 @@ bouncy-narwhal-20250120091057:
       log_interval: 10
       n_batch: 5
       num_epochs: 100
-dancing-panda-20250120113812:
+quirky-sloth-20250123131338:
   data:
-    data_name: cifar10
-    latent_dim: 400
+    data_name: mnist
+    latent_dim: 50
     n_samples: 50000
     n_samples_graph: 5000
   models:
     diffusion:
-      depth: 5
+      depth: 4
       dropout: 0.1
-      hidden_units: 600
-      time_embed_dim: 100
+      hidden_units: 256
+      time_embed_dim: 32
       use_residual: true
     encoder-decoder:
       head: CNN
-      n_features: 64
-  training:
-    diffusion:
-      batch_size: 5000
-      beta_bounds:
-      - 0.0001
-      - 0.02
-      learning_rate: 0.00025
-      log_interval: 100
-      num_epochs: 5000
-      timesteps: 1000
-      weight_decay: 0.0
-    encoder_decoder:
-      learning_rate: 0.0005
-      log_interval: 50
-      n_batch: 10
-      num_epochs: 500
-sparkly-robot-20250120102715:
-  data:
-    data_name: cifar10
-    latent_dim: 200
-    n_samples: 50000
-    n_samples_graph: 5000
-  models:
-    diffusion:
-      depth: 5
-      dropout: 0.1
-      hidden_units: 500
-      time_embed_dim: 100
-      use_residual: true
-    encoder-decoder:
-      head: CNN
-      n_features: 40
+      model_config: {}
   training:
     diffusion:
       batch_size: 5000
@@ -91,6 +59,6 @@ sparkly-robot-20250120102715:
       weight_decay: 0.0
     encoder_decoder:
       learning_rate: 0.001
-      log_interval: 50
-      n_batch: 6
-      num_epochs: 500
+      log_interval: 10
+      n_batch: 10
+      num_epochs: 200
